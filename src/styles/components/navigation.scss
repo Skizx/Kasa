@@ -1,0 +1,37 @@
+.header-padding {
+    padding: 20px 20px 0;
+}
+
+.kasa-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kasa-logo {
+    height: 47px;
+    width: 145px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &-center {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 142.6%;
+    padding: 10px;
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+    color: #FF6060;
+    }
+    &-center:hover {
+        text-decoration-line: underline;
+    }
+}
+

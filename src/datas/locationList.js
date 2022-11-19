@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-expressions */
 [
-    {
+	{
 		"id": "c67ab8a7",
 		"title": "Appartement cosy",
 		"cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",

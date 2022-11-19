@@ -1,0 +1,23 @@
+.banner-background {
+    width: 370px;
+    height: 111px;
+    margin: 20px 20px;
+    border-radius: 10px;
+    background-image: url(../../assets/banner.png);
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+    mix-blend-mode: darken;
+
+    &-title {
+        font-family: 'Montserrat';
+        padding: 31px 102px 32px 16px;
+        height: 30px;
+        width: 299px;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 24px;
+color: #000000
+    }
+}
