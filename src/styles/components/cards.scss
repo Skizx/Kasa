@@ -1,0 +1,51 @@
+.card-location {
+    position: relative;
+    display: flex;
+    width: 335px;
+    height: 225px;
+    border-radius: 10px;
+
+    & img {
+        display: flex;
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    &_layer {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        background-color: #FF6060;
+        width: 100%;
+    }
+
+    &_title {
+        position: absolute;
+        left: 5.88%;
+        right: 5.88%;
+        top: 73.73%;
+        bottom: 5.88%;
+        
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 142.6%;
+        /* or 26px */
+        
+        display: flex;
+        align-items: flex-end;
+        
+        color: #FFFFFF;
+    }
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+}

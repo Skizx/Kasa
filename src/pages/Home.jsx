@@ -1,11 +1,13 @@
 import Banner from "../components/banner"
-import Cards from "../components/Cards"
+import Logements from "../components/Logements"
+import Footer from "../components/Footer"
 
 function Home() {
     return (
       <div>
         <Banner />
-        <Cards />
+        <Logements />
+        <Footer />
       </div>
     )
   }

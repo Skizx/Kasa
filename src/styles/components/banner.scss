@@ -1,7 +1,11 @@
 .banner-background {
-    width: 370px;
-    height: 111px;
-    margin: 20px 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 335px;
+    height: 110px;
+    margin: 20px 0px;
     border-radius: 10px;
     background-image: url(../../assets/banner.png);
     background-position:right ;
@@ -10,14 +14,21 @@
     background-color: #000000;
 
     &-title {
+        padding: 31px 138px 32px 16px;
+
         font-family: 'Montserrat';
-        padding: 31px 102px 32px 16px;
-        height: 30px;
-        width: 299px;
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 24px;
-color: #FFFFFF;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 100%;
+        display: flex;
+        align-items: flex-end;
+        color: #FFFFFF;
     }
+}
+
+.banner-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
 }
