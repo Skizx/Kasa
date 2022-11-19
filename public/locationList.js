@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-expressions */
 [
 	{
 		"id": "c67ab8a7",
