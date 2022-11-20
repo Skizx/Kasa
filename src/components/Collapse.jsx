@@ -45,7 +45,7 @@ function Collapse() {
                 <div className='item' key={i}>
                     <div className='title' onClick={() => toggle(i)}>
                         <h2>{item.aboutTitle}</h2>
-                        <span>{selected === i ? <img src={Vectorup} alt="" /> : <img src={Vectordown} alt="" />}</span>
+                        <span>{selected === i ? <img src={Vectordown} alt="" /> : <img src={Vectorup} alt="" />}</span>
                     </div>
                     <div className={selected === i ? 'content' : 'content show'}>{item.aboutText}</div>
                 </div>
