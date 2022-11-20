@@ -1,0 +1,18 @@
+.bannerabout-container {
+    display: flex;
+    width: 335px;
+    height: 225px;
+    margin: 20px 20px;
+    object-fit: cover;
+    border-radius: 25px;
+    mix-blend-mode: darken;
+    background-color: #000000;
+
+    & img {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        border-radius: 25px;
+        width: 100%;
+    }
+}

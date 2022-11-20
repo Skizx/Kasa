@@ -1,5 +1,5 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
+import "../styles/components/banner.scss"
 
 const Banner = () => {
     return (
