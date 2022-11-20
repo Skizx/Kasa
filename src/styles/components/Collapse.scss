@@ -25,6 +25,11 @@
     color: #F7F7F7F7;
     padding: 0px 11.51px;
     cursor: pointer;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 142.6%; 
 }
 
 .content {
@@ -42,7 +47,7 @@
 
 .content.show {
     height: auto;
-    padding: 25px 11.51px;    
+    padding: 20px 11.51px;    
     max-height: 9999px;
     transition: all 0.1s cubic-bezier(1,0,1,0);
 }
