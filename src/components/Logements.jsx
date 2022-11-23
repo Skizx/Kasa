@@ -19,7 +19,7 @@ const Logements = () => {
             <div className='card-container'>
                 {data.map((logement, id) => 
                  <div className='card_logement' key={id}>
-                    <Link to={`/locationList/${logement.id}`}>
+                    <Link to={`/Accomodationsheet/${logement.id}`}>
                         <Card cover={logement.cover} title={logement.title}/>
                     </Link>
                  </div>)}
