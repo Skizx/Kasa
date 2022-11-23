@@ -28,7 +28,7 @@ const AboutData = [
 
 function Collapse() {
 
-    const [selected, setSelected] = useState(null)
+    const [selected, setSelected] = useState(0)
 
     const toggle = (i) => {
         if (selected === i) {
@@ -43,11 +43,11 @@ function Collapse() {
         <div className='collapse'>
             {AboutData.map((item, i) => (
                 <div className='item' key={i}>
-                    <div className='title' onClick={() => toggle(i)}>
+                    <div className='title'>
                         <h2>{item.aboutTitle}</h2>
-                        <span>{selected === i ? <img src={Vectordown} alt="" /> : <img src={Vectorup} alt="" />}</span>
+                        <span onClick={() => toggle(i)}>{selected === i ? <img src={Vectordown} alt="" /> : <img src={Vectorup} alt="" />}</span>
                     </div>
-                    <div className={selected === i ? 'content' : 'content show'}>{item.aboutText}</div>
+                    <div className={selected === i ? 'content show' : 'content'}>{item.aboutText}</div>
                 </div>
             ))}
         </div>
