@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Navigation from "./components/navigation";
 import Accommodationsheet from "./pages/Accommodationsheet";
 import Error from "./pages/Error.jsx";
+import Footer from "./components/Footer";
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 					<Route path="*" element={<Error />} />
 				</Routes>
 			</main>
+			<Footer />
 		</div>
 	)
 }

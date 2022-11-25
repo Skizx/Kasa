@@ -9,6 +9,7 @@
 
 .collapse {
     width: 335px;
+    min-height: 50vh;
 }
 
 .item {
@@ -23,7 +24,7 @@
     background-color: #FF6060;
     border-radius: 5px;
     color: #F7F7F7F7;
-    padding: 0px 11.51px;
+    padding: 5.5px 11.51px;
     cursor: pointer;
     font-family: 'Montserrat';
     font-style: normal;
