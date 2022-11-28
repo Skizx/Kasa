@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import '../styles/components/carrousel.scss'
 import left from '../assets/Vectorleft.png'
 import right from '../assets/Vectorright.png'
 
@@ -41,9 +42,9 @@ const Carrousel = ({ slides }) => {
               : 'slider bl-msk wh-msk'
           }
         >
-          {index === current && <img src={slide} alt="appartement à louer" height="100" width="335"/>}
+          {index === current && <img className='carrousel-container_img' src={slide} alt="appartement à louer"/>}
           {index === current && (
-            <span className="slider__number">
+            <span className="slider_number">
               {current + 1}/{length}
             </span>
           )}

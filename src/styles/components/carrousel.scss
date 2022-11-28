@@ -1,0 +1,32 @@
+#carrousel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.carrousel-container_img {
+    display: flex;
+    width: 335px;
+    height: 225px;
+    border-radius: 10px;
+}
+
+.leftArrow {
+    position: absolute;
+    left: 28px;
+}
+.rightArrow {
+    position: absolute;
+    right: 28px
+}
+
+.slider_number {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    right: 50%;
+    color: #FFFFFF;
+}
