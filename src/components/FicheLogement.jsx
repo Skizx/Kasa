@@ -2,6 +2,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Carrousel from './Carrousel';
+import "../styles/components/fichelogements.scss"
 import { useParams } from 'react-router-dom';
 
 

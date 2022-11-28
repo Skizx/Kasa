@@ -22,7 +22,7 @@ const Carrousel = ({ slides }) => {
           src={left} //Affichage des flèches seulement si length > 1
           alt="gauche"
           onClick={prevSlide}
-          className="leftArrow"
+          className="leftVector"
         />
       )}
       {length > 1 && (
@@ -30,19 +30,20 @@ const Carrousel = ({ slides }) => {
           src={right}
           alt="droite"
           onClick={nextSlide}
-          className="rightArrow"
+          className="rightVector"
         />
       )}
       {slides.map((slide, index) => (
         <div
-          key={index} // mise en place du slider avec affichage conditionnel et opacity=1 quand le slide en cours vaut l'index
-          className={
-            current === index
-              ? 'slider bl-msk wh-msk active-anim'
-              : 'slider bl-msk wh-msk'
-          }
+          key={index} // mise en place du slider avec affichage conditionnel  quand le slide en cours vaut l'index
         >
-          {index === current && <img className='carrousel-container_img' src={slide} alt="appartement à louer"/>}
+          {index === current && ( // Affichage conditionnel de l'image en fonction de la valeur de l'index en cours
+            <img
+              className="carrousel-container_img"
+              src={slide}
+              alt="appartement à louer" 
+            />
+          )}
           {index === current && (
             <span className="slider_number">
               {current + 1}/{length}

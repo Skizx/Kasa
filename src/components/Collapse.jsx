@@ -27,9 +27,9 @@ const AboutData = [
 ]
 
 function Collapse() {
-  const [selected, setSelected] = useState(0)
+  const [selected, setSelected] = useState(0) // je défini l'index du premier onglet à 0
 
-  const toggle = (i) => {
+  const toggle = (i) => { 
     if (selected === i) {
       return setSelected(null)
     }
@@ -43,15 +43,15 @@ function Collapse() {
           <div className="item" key={i}>
             <div className="title">
               <h2>{item.aboutTitle}</h2>
-              <span onClick={() => toggle(i)}>
-                {selected === i ? (
-                  <img src={Vectordown} alt="" />
+              <span onClick={() => toggle(i)}> 
+                {selected === i ? ( // mise en place du toggle avec affichage conditionnel des flèches quand l'onglet en cours vaut l'index
+                  <img src={Vectordown} alt="bas" />
                 ) : (
-                  <img src={Vectorup} alt="" />
+                  <img src={Vectorup} alt="haut" />
                 )}
               </span>
             </div>
-            <div className={selected === i ? 'content show' : 'content'}>
+            <div className={selected === i ? 'content show' : 'content'}/* affichage conditionnel du contenu quand l'onglet en cours vaut l'index */> 
               {item.aboutText}
             </div>
           </div>
