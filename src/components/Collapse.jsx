@@ -29,7 +29,7 @@ const AboutData = [
 function Collapse() {
   const [selected, setSelected] = useState(0) // je défini l'index du premier onglet à 0
 
-  const toggle = (i) => { 
+  const toggle = (i) => {  // création du toggle avec l'index comme paramètre 
     if (selected === i) {
       return setSelected(null)
     }
