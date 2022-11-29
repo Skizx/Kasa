@@ -17,9 +17,9 @@ const Carrousel = ({ slides }) => {
 
   return (
     <section id="carrousel-container">
-      {length > 1 && (
+      {length > 1 && ( //Affichage des flèches seulement si length > 1
         <img
-          src={left} //Affichage des flèches seulement si length > 1
+        src={left} 
           alt="gauche"
           onClick={prevSlide}
           className="leftVector"
@@ -35,7 +35,7 @@ const Carrousel = ({ slides }) => {
       )}
       {slides.map((slide, index) => (
         <div
-          key={index} // mise en place du slider avec affichage conditionnel  quand le slide en cours vaut l'index
+          key={index} // mise en place du slider avec affichage conditionnel quand le slide en cours vaut l'index
         >
           {index === current && ( // Affichage conditionnel de l'image en fonction de la valeur de l'index en cours
             <img

@@ -26,26 +26,28 @@ const FicheLogement = () => {
 
   // déclaration des variables 
   const slidePics = logements && logements.pictures
-  const equipments = logements && logements.equipments
-  // eslint-disable-next-line no-unused-vars
+  const tags = logements && logements.tags
+
   const equip =
     logements &&
-    equipments.map((item, index) => (
-      <li key={index} className="equipList">
+    tags.map((item, index) => (
+      <li key={index} className='taglist'>
         {item}
       </li>
     ))
 
   return (
     logements && (
-      <div key={params.id} className="fiche-container">
+      <div key={params.id} className='fiche-container'>
         <Carrousel slides={slidePics} />
         <div>
-          <h1>{logements.title}</h1>
-          <h2>{logements.location}</h2>
+          <h1 className='fiche-container_title'>{logements.title}</h1>
+          <h2 className='fiche-container_location'>{logements.location}</h2>
         </div>
-        <div>
-            {logements.tags}
+        <div className='taglist-container'>
+            <ul className='taglist-container_position'>
+            {equip} 
+            </ul>
         </div>
       </div>
     )
