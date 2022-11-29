@@ -65,3 +65,33 @@
   color: #ffffff;
   background-color: #ff6060;
 }
+
+.rating-host-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 335px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.user-container {
+  display: flex;
+  gap: 10px;
+
+  &_name {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 142.6%;
+    color: #ff6060;
+    width: 80px;
+    text-align: right;
+  }
+}
+
+.user-picture {
+  width: 32px;
+  border-radius: 100%;
+}

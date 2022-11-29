@@ -38,23 +38,28 @@ const FicheLogement = () => {
 
   return (
     logements && (
-        // Affichage Carrousel props
+      // Affichage Carrousel props
       <div key={params.id} className="fiche-container">
         <Carrousel slides={slidePics} />
         <div /* Affichage du titre ainsi que de la localisation */>
           <h1 className="fiche-container_title">{logements.title}</h1>
           <h2 className="fiche-container_location">{logements.location}</h2>
         </div>
-        <div className="taglist-container" /* Affichage de la liste de tags props */>
+        <div
+          className="taglist-container" /* Affichage de la liste de tags props */
+        >
           <ul className="taglist-container_position">{tags}</ul>
         </div>
-        <div>
-          <div>{logements.rating}</div>
-          <div className='user-container'>
-            <div className='user-container_name'>
-            {logements.host.name} 
-            </div>
-            <img src={logements.host.picture} alt="User profil" className='user-picture' />
+        <div className='rating-host-container'>
+          <div>{logements.rating}
+          </div>
+          <div className="user-container">
+            <div className="user-container_name">{logements.host.name}</div>
+            <img
+              src={logements.host.picture}
+              alt="User profil"
+              className="user-picture"
+            />
           </div>
         </div>
       </div>
