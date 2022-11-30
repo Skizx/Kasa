@@ -5,11 +5,12 @@ import Carrousel from './Carrousel'
 import Collapse from './Collapse'
 import Rate from './Rate'
 import '../styles/components/fichelogements.scss'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 const FicheLogement = () => {
   // récupération des paramètre passé dans le route path
   const params = useParams()
+  const navigate = useNavigate()
   const [logements, setLogements] = useState()
 
   useEffect(() => {
@@ -22,6 +23,11 @@ const FicheLogement = () => {
       // utilisation de la méthode map() permettant de crée un nouveau tableau avec les paramètre retourner,
       // envoyer à la fonction setLogements permettant de modifier la valeur de l'élement logement
       res.data.map(() => setLogements(onelogement))
+      // Gestion de l'erreur sur l'id indiquant que si l'ID trouver dans onelogement est undefined 
+      // Nous renvoie à la page d'erreur grâce au hook useNavigate()
+      if (onelogement === undefined) {
+        return navigate("/Error")
+      }
     }
     getData()
   }, [])
