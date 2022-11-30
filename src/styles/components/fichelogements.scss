@@ -1,13 +1,20 @@
 .fiche-container {
   min-height: 61vh;
 
+  &_global {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
   &_title {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 142.6%;
-    margin: 10px 0px 5px 20px;
+    margin: 10px 0px 5px 0px;
     width: 335px;
 
     /* or 26px */
@@ -23,7 +30,8 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 142.6%;
-    margin-left: 20px;
+    width: 335px;
+
 
     /* or 20px */
     display: flex;
@@ -36,7 +44,6 @@
 .taglist-container {
   display: flex;
   flex-direction: row;
-  margin-left: 20px;
   margin-top: 10px;
 
   &_position {
@@ -56,7 +63,7 @@
 
   /* or 14px */
   justify-content: center;
-  text-align: center;
+  align-items: center;
   overflow: hidden;
   border-radius: 5px;
   width: 84px;
@@ -70,14 +77,13 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  width: 335px;
-  margin-left: 20px;
-  margin-top: 10px;
+  margin: 10px 0px 20px 20px;
 }
 
 .user-container {
   display: flex;
   gap: 10px;
+  margin-right: 20px;
 
   &_name {
     font-family: 'Montserrat';
@@ -86,7 +92,7 @@
     font-size: 12px;
     line-height: 142.6%;
     color: #ff6060;
-    width: 80px;
+    width: 50px;
     text-align: right;
   }
 }

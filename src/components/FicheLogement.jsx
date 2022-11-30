@@ -2,6 +2,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Carrousel from './Carrousel'
+import Collapse from './Collapse'
 import '../styles/components/fichelogements.scss'
 import { useParams } from 'react-router-dom'
 
@@ -41,19 +42,20 @@ const FicheLogement = () => {
       // Affichage Carrousel props
       <div key={params.id} className="fiche-container">
         <Carrousel slides={slidePics} />
-        <div /* Affichage du titre ainsi que de la localisation */>
+        <div
+          className="fiche-container_global" /* Affichage du titre ainsi que de la localisation */
+        >
           <h1 className="fiche-container_title">{logements.title}</h1>
           <h2 className="fiche-container_location">{logements.location}</h2>
         </div>
         <div
-          className="taglist-container" /* Affichage de la liste de tags props */
+          className="taglist-container fiche-container_global" /* Affichage de la liste de tags props */
         >
           <ul className="taglist-container_position">{tags}</ul>
         </div>
-        <div className='rating-host-container'>
-          <div>{logements.rating}
-          </div>
-          <div className="user-container">
+        <div className="rating-host-container"/* Affichage des etoiles correspondant à la note du logements */>
+          <div className="fiche-container_global">{logements.rating}</div>
+          <div className="user-container" /* Affichage du prenom/nom de l'hôte ainsi que sa photo de profil */>
             <div className="user-container_name">{logements.host.name}</div>
             <img
               src={logements.host.picture}
@@ -61,6 +63,9 @@ const FicheLogement = () => {
               className="user-picture"
             />
           </div>
+        </div>
+        <div>
+          <Collapse />
         </div>
       </div>
     )
