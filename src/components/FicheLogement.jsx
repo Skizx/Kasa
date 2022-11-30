@@ -29,6 +29,7 @@ const FicheLogement = () => {
   // déclaration des variables représentant les composants objets récupérer dans logements
   const slidePics = logements && logements.pictures
   const tag = logements && logements.tags
+  const equipement = logements && logements.equipments;
   // création d'un tableau contenant les tags du logements, les renvoyants sous forme de liste à puces
   const tags =
     logements &&
@@ -37,6 +38,15 @@ const FicheLogement = () => {
         {item}
       </li>
     ))
+
+    const equipements = 
+    logements &&
+    equipement.map((equip, index) => (
+      <li key={index} className='equipementlist'>
+        {equip}
+      </li>
+    ))
+
 
   return (
     logements && (
@@ -66,7 +76,10 @@ const FicheLogement = () => {
           </div>
         </div>
         <div>
-          <Collapse  />
+          <Collapse aboutTitle='Description'
+          aboutText={logements.description} />
+          <Collapse aboutTitle='Equipements'
+          aboutText={equipements} />
         </div>
       </div>
     )
