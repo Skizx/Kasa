@@ -3,6 +3,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Carrousel from './Carrousel'
 import Collapse from './Collapse'
+import Rate from './Rate'
 import '../styles/components/fichelogements.scss'
 import { useParams } from 'react-router-dom'
 
@@ -53,8 +54,8 @@ const FicheLogement = () => {
         >
           <ul className="taglist-container_position">{tags}</ul>
         </div>
-        <div className="rating-host-container"/* Affichage des etoiles correspondant à la note du logements */>
-          <div className="fiche-container_global">{logements.rating}</div>
+        <div className="rating-host-container"/* Affichage des etoiles correspondant à la note du logements props */>
+          <div className="fiche-container_global"><Rate starRating={logements.rating}/></div>
           <div className="user-container" /* Affichage du prenom/nom de l'hôte ainsi que sa photo de profil */>
             <div className="user-container_name">{logements.host.name}</div>
             <img
@@ -65,7 +66,7 @@ const FicheLogement = () => {
           </div>
         </div>
         <div>
-          <Collapse />
+          <Collapse  />
         </div>
       </div>
     )
