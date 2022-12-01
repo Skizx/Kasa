@@ -3,9 +3,9 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Navigation from "./components/navigation";
-import Accommodationsheet from "./pages/Accommodationsheet";
 import Error from "./pages/Error.jsx";
 import Footer from "./components/Footer";
+import FicheLogement from "./pages/FicheLogement";
 
 function App() {
 	return (
@@ -15,7 +15,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/about" element={<About />} />
-					<Route path="/accomodationsheet/:id" element={<Accommodationsheet />} />
+					<Route path="/FicheLogement/:id" element={<FicheLogement />} />
 					/* path="*" fonctionnant si jamais l'url ne correspond à rien de déclaré au dessus */
 					<Route path="*" element={<Error />} />
 				</Routes>

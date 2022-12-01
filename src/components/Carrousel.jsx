@@ -19,7 +19,7 @@ const Carrousel = ({ slides }) => {
     <section id="carrousel-container">
       {length > 1 && ( //Affichage des flèches seulement si length > 1
         <img
-        src={left} 
+          src={left}
           alt="gauche"
           onClick={prevSlide}
           className="leftVector"
@@ -41,7 +41,7 @@ const Carrousel = ({ slides }) => {
             <img
               className="carrousel-container_img"
               src={slide}
-              alt="appartement à louer" 
+              alt="appartement à louer"
             />
           )}
           {index === current && (
