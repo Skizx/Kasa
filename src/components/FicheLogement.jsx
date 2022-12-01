@@ -10,15 +10,17 @@ import { useParams, useNavigate } from 'react-router-dom'
 const FicheLogement = () => {
   // récupération des paramètre passé dans le route path
   const params = useParams()
+  // redirection vers le path entrer en argument
   const navigate = useNavigate()
   const [logements, setLogements] = useState()
 
   useEffect(() => {
     const getData = async () => {
-      // récupération des données du fichier locationList avec axion agissant comme fetch transformant les données en objets
+      // récupération des données du fichier locationList avec axios agissant comme fetch transformant les données en objets
+      // simulant un appel API
       const res = await axios.get('/locationList.js')
       // utilisation de la méthode find() pour chaque élements se trouvant dans les paramètre de la route {id}
-      // nous retournant les données du fichier locationList selon l'id
+      // nous retournant les données du fichier locationList si l'id retouner est égale à l'id de la route
       const onelogement = res.data.find(({ id }) => id === params.id)
       // utilisation de la méthode map() permettant de crée un nouveau tableau avec les paramètre retourner,
       // envoyer à la fonction setLogements permettant de modifier la valeur de l'élement logement
@@ -82,9 +84,11 @@ const FicheLogement = () => {
           </div>
         </div>
         <div>
-          <Collapse aboutTitle= ' Description '
+          <Collapse 
+          aboutTitle= ' Description '
           aboutText={logements.description} />
-          <Collapse aboutTitle= ' Equipements '
+          <Collapse 
+          aboutTitle= ' Equipements '
           aboutText={equipements} />
         </div>
       </div>
