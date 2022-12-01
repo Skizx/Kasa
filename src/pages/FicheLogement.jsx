@@ -1,8 +1,9 @@
-/* eslint-disable react-hooks/exhaustive-deps */
+
 import React, { useEffect, useState } from 'react'
 import Carrousel from '../components/Carrousel'
 import Collapse from '../components/Collapse'
 import Rate from '../components/Rate'
+import Error from './Error'
 import '../styles/components/fichelogements.scss'
 import { useParams } from 'react-router-dom'
 import allItems  from '../datas/locationList'
@@ -12,6 +13,7 @@ const FicheLogement = () => {
   const { id } = useParams();
   const [logement, setLogement] = useState();
   // redirection vers le path entrer en argument
+  
 
 
 
@@ -20,12 +22,12 @@ const FicheLogement = () => {
     // nous retournant les données du fichier locationList si l'id retouner est égale à l'id de la route
       const oneItems = allItems.find((element) => element.id === id)
       setLogement(oneItems)
-    }, [])
+    }, [id])
     
     // Gestion de l'erreur sur l'id indiquant que si l'ID trouver dans onelogement est undefined 
-    // Nous renvoie à la page d'erreur grâce au hook useNavigate()
-    if (!logement) {
-      return ("/Error")
+    // Nous retourne sur la page Erreur 404
+    if (logement === undefined) {
+      return <Error />
     }
   // création d'un tableau contenant les tags du logements, les renvoyants sous forme de liste à puces
   const tags =
