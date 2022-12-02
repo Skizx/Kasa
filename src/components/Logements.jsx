@@ -8,7 +8,7 @@ const Logements = () => {
 
 
   return (
-    <div>
+    <div className="wrapper">
       <div className="card-container">
         {allItems.map((logement, id) => (
           <div className="card_logement" key={id}>

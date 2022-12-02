@@ -11,10 +11,17 @@
   &_logo {
     display: flex;
     position: absolute;
-    left: 33.87%;
-    right: 33.6%;
+    left: 47%;
+    right: 50%;
     top: 29.67%;
     bottom: 51.46%;
+
+    @media screen and (min-width: 768px) and (max-width: 1680px){
+      justify-content: center;
+      align-items: center;
+      width: 122px;
+      height: 39px;
+    }
   }
 
   &_title {
@@ -31,5 +38,9 @@
     text-align: center;
 
     color: #ffffff;
+
+    @media screen and (min-width: 768px) and (max-width: 1680px) {
+      font-size: 24px;
+    }
   }
 }
