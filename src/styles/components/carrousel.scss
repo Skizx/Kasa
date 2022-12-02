@@ -13,17 +13,35 @@
     height: 225px;
     border-radius: 10px;
     background-color: #FF6060;
+
+    @media screen and (min-width: 768px) and (max-width: 1920px) {
+        width: 1240px;
+        height: 415px;
+        object-fit: cover;
+    }
 }
 
 .leftVector {
     cursor: pointer;
     position: absolute;
     left: 28px;
+    width: 12px;
+    height: 20px;
+
+    @media screen and (min-width: 768px) and (max-width: 1920px) {
+        left: 125px;
+    }
 }
 .rightVector {
     cursor: pointer;
     position: absolute;
-    right: 28px
+    right: 28px;
+    width: 12px;
+    height: 20px;
+
+    @media screen and (min-width: 768px) and (max-width: 1920px) {
+        right: 125px;
+    }
 }
 
 .slider_number {
@@ -32,4 +50,8 @@
     left: 50%;
     right: 50%;
     color: #FFFFFF;
+
+    @media screen and (min-width: 768px) and (max-width: 1920px) {
+        font-size: 18px;
+    }
 }
