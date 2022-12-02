@@ -5,7 +5,7 @@
     height: 225px;
     border-radius: 10px;
 
-    @media screen and (min-width: 768px) and (max-width: 1680px) {
+    @media screen and (min-width: 768px) and (max-width: 1920px) {
         width: 340px;
         height: 340px;
     }
@@ -54,14 +54,14 @@
     gap: 20px;
     flex-wrap: wrap;
 
-    @media screen and (min-width: 768px) and (max-width: 1680px) {
+    @media screen and (min-width: 768px) and (max-width: 1920px) {
         align-items: center;
         gap: 50px;
         width: 1240px;
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1680px) {
+@media screen and (min-width: 768px) and (max-width: 1920px) {
     .wrapper-container {
         width: 100%;
 

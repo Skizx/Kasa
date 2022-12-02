@@ -5,13 +5,26 @@
     object-fit: cover;
     border-radius: 25px;
     mix-blend-mode: darken;
-    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 768px) and (max-width: 1920px) {
+        margin: 40px 20px;
+    }
+    
 
+    
     & img {
         display: flex;
         align-content: center;
         justify-content: center;
         border-radius: 25px;
         width: 100%;
+        background-color: black;
+        @media screen and (min-width: 768px) and (max-width: 1920px) {
+            width: 1240px;
+            height: 223px;
+            border-radius: 25px;
+            margin: 40px 0px;
+        }
     }
 }

@@ -2,7 +2,7 @@ import ErrorPage from "../components/ErrorPage"
 
 function Error() {
     return (
-      <div>
+      <div className="error-container_width">
         <ErrorPage />
       </div>
     )
