@@ -30,6 +30,8 @@
 
     @media screen and (min-width: 768px) and (max-width: 1920px) {
         left: 125px;
+        width: auto;
+        height: auto;
     }
 }
 .rightVector {
@@ -41,6 +43,8 @@
 
     @media screen and (min-width: 768px) and (max-width: 1920px) {
         right: 125px;
+        width: auto;
+        height: auto;
     }
 }
 

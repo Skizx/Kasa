@@ -48,6 +48,7 @@ const FicheLogement = () => {
     <>
       <div key={id} className="fiche-container">
         <Carrousel slides={logement.pictures} />
+        <div className='fiche-container_global_desktop'>
         <div
           className="fiche-container_global" /* Affichage du titre ainsi que de la localisation */
         >
@@ -60,7 +61,9 @@ const FicheLogement = () => {
           <ul className="taglist-container_position">{tags}</ul>
         </div>
         <div className="rating-host-container"/* Affichage des etoiles correspondant à la note du logements props */>
-          <div className="fiche-container_global"><Rate starRating={logement.rating}/></div>
+          <div className="fiche-container_global stars">
+            <Rate starRating={logement.rating}/>
+            </div>
           <div className="user-container" /* Affichage du prenom/nom de l'hôte ainsi que sa photo de profil */>
             <div className="user-container_name">{logement.host.name}</div>
             <img
@@ -70,13 +73,18 @@ const FicheLogement = () => {
             />
           </div>
         </div>
-        <div>
+        </div>
+        <div className='collapse-container'>
+          <div className='collapse-container_logement'>
           <Collapse 
           aboutTitle= ' Description '
           aboutText={logement.description} />
+          </div>
+          <div className='collapse-container_logement'>
           <Collapse 
           aboutTitle= ' Equipements '
           aboutText={equipements} />
+          </div>
         </div>
       </div>
       </>

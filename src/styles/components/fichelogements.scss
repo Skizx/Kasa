@@ -7,7 +7,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    @media screen and (min-width: 768px) and (max-width: 1920px) {
+
+      &_desktop {
+        position: relative;
+      }
+    }
   }
+
 
   &_title {
     font-family: 'Montserrat';
@@ -23,6 +31,12 @@
     align-items: flex-end;
 
     color: #ff6060;
+
+    @media screen and (min-width: 768px) and (max-width: 1920px) {
+      font-size: 36px;
+      flex-direction: row;
+      width: 1240px;
+    }
   }
 
   &_location {
@@ -39,6 +53,11 @@
     align-items: flex-end;
 
     color: #ff6060;
+
+    @media screen and (min-width: 768px) and (max-width: 1920px) {
+      font-size: 18px;
+      width: 1240px;
+    }
   }
 }
 
@@ -51,6 +70,10 @@
     display: flex;
     gap: 10px;
     width: 335px;
+
+    @media screen and (min-width: 768px) and (max-width: 1920px) {
+      width: 1240px;
+    }
   }
 }
 
@@ -72,19 +95,43 @@
 
   color: #ffffff;
   background-color: #ff6060;
+
+  @media screen and (min-width: 768px) and (max-width: 1920px) {
+    font-size: 14px;
+    border-radius: 10px;
+    height: 25px;
+  }
 }
 
 .rating-host-container {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  align-items: center;
   margin: 10px 0px 20px 20px;
+  
+  @media screen and (min-width: 768px) and (max-width: 1920px) {
+    position: absolute;
+    right: 75px;
+    top: 10px;
+    justify-content: flex-end;
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+}
+
+.stars {
+  height: 15px;
 }
 
 .user-container {
   display: flex;
   gap: 10px;
   margin-right: 20px;
+
+  @media screen and (min-width: 768px) and (max-width: 1920px) {
+    align-items: center;
+  }
 
   &_name {
     font-family: 'Montserrat';
@@ -95,10 +142,41 @@
     color: #ff6060;
     width: 50px;
     text-align: right;
+
+    @media screen and (min-width: 768px) and (max-width: 1920px) {
+      font-size: 18px;
+      width: 90px;
+    }
   }
 }
 
 .user-picture {
   width: 32px;
   border-radius: 100%;
+
+  @media screen and (min-width: 768px) and (max-width: 1920px) {
+    width: 64px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1920px) {
+  .collapse-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1920px) {
+    .collapse-container_logement {
+      width: 45%;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1920px) {
+  .stars {
+    font-size: 30px;
+    height: 30px;
+  }
 }
