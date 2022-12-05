@@ -7,10 +7,21 @@
     height: 110px;
     margin: 20px 0px;
     border-radius: 10px;
-    background-image: url(../../assets/banner.png);
-    background-position:right ;
-    background-size: cover;
     background-color: #000000;
+
+    &_img {
+        width: 335px;
+        height: 110px;
+        border-radius: 10px;
+        opacity: 80%;
+
+        @media screen and (min-width: 768px) and (max-width: 1920px) {
+            width: 1240px;
+            height: 223px;
+            border-radius: 25px;
+        }
+    }
+
 
     @media screen and (min-width: 768px) and (max-width: 1920px) {
         width: 1240px;
@@ -21,6 +32,7 @@
 
     &-title {
         padding: 31px 100px 32px 16px;
+        position: absolute;
 
         font-family: 'Montserrat';
         font-style: normal;
@@ -46,3 +58,4 @@
         justify-content: center;
         width: 100%;
 }
+
