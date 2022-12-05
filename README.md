@@ -1,3 +1,11 @@
+# Projet 7 Kasa - Location de logements & appartements
+
+Création d'une application web de location immobilière avec react
+
+# Outils & Contraintes techniques 
+
+Utilisation de Create React App, React Router, Styling: utilisation de sass, Pas de librairie React externe
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
