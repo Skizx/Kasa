@@ -10,9 +10,9 @@ const Footer = () => {
         alt="Logo Kasa blanc"
         className="footer-background_logo"
       />
-      <p className="footer-background_title">
+      <h2 className="footer-background_title">
         © 2020 Kasa. All rights reserved
-      </p>
+      </h2>
     </div>
   )
 }
