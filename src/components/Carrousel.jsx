@@ -44,11 +44,9 @@ const Carrousel = ({ slides }) => {
               alt="appartement à louer"
             />
           )}
-          {index === current && (
             <span className="slider_number">
               {current + 1}/{length}
             </span>
-          )}
         </div>
       ))}
     </section>
