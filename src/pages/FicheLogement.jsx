@@ -23,7 +23,7 @@ const FicheLogement = () => {
       setLogement(oneItems)
     }, [id])
     
-    // Gestion de l'erreur sur l'id indiquant que si l'ID trouver dans onelogement est undefined 
+    // Gestion de l'erreur sur l'id indiquant que si l'ID trouver dans logement est undefined 
     // Nous retourne sur la page Erreur 404
     if (logement === undefined) {
       return <Error />
